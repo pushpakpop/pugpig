@@ -1,0 +1,138 @@
+<!--
+
+Licence:
+==============================================================================
+
+(c) 2011, Kaldor Holdings Ltd. All rights reserved.
+
+Use in source and binary forms for commercially licensed Pugpig customers is governed by the Pugpig Software Licence Agreement at http://pugpig.com/download/licences/pugpig_licence_agreement.txt
+
+For all other parties, use in source and binary forms is governed by the Pugpig Software Evaluation Agreement at http://pugpig.com/download/licences/pugpig_evaluation_agreement.txt
+
+By downloading, reading and/or using this source, you agree to become a licensee of the Pugpig Software Suite and you are bound by the terms of the the licence agreement.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes"> 
+    <meta name="apple-touch-fullscreen" content="yes">
+    <title>Pugpig web reader</title>
+    <link rel="stylesheet" type="text/css" href="css/style.min.css?v=0.5" />
+  </head>
+
+  <body class="preload disable-navbars is-ios disable-fullscreen">
+
+    <header class="reader-bar navbar navbar-inverse navbar-fixed-top">
+
+      <div class="navbar-inner">
+
+        <span class="brand">Pugpig Web Reader 0.6.2_dev</span>
+
+        <ul class="nav">
+          <li class="display-toc">
+            <a href="#">
+              <i class="icon-list icon-white"></i> Table of Contents
+            </a>
+          </li>
+          <li class="display-edition-selector">
+            <a href="#">
+              <i class="icon-book icon-white"></i> Editions
+            </a>
+          </li>
+          <li class="toggle-fullscreen">
+            <a href="#">
+              <i class="icon-fullscreen icon-white"></i> Fullscreen Mode
+            </a>
+          </li>
+        </ul>
+
+        <div class="reading-progress pull-right navbar-text"></div>
+
+      </div>
+
+    </header>
+
+    <div class="secondary-reader-bar navbar navbar-fixed-top">
+      <div class="navbar-inner">
+
+        <form class="navbar-form form-inline pull-left">
+          <label for="display-mode-picker" class="resizing-control hidden">Device</label>
+          <select class="display-mode-picker input-xlarge resizing-control hidden" id="display-mode-picker"></select>
+          <label for="font-resize">Font Size</label>
+          <select class="font-resize input-small" id="font-resize">
+            <option value="1.0">1.0</option>
+            <option value="1.125">1.125</option>
+            <option value="1.25">1.25</option>
+          </select>
+          <label for="custom-width" class="custom-dimensions-control hidden">Width</label><input type="text" id="custom-width" class="custom-dimensions-control input-mini hidden" placeholder="Custom Width">
+          <label for="custom-height" class="custom-dimensions-control hidden">Height</label><input type="text" id="custom-height" class="custom-dimensions-control input-mini hidden" placeholder="Custom Height">
+        </form>
+      </div>
+    </div>
+
+    <div class="prev-page">Previous Page</div>
+
+    <div class="reader">
+
+      <div class="reader-frame">
+
+        <iframe id="reader-window-one" name="reader-window-one" frameborder="0"></iframe>
+        <iframe id="reader-window-two" name="reader-window-two" frameborder="0"></iframe>
+
+      </div>
+
+      <div class="currently-viewing"></div>
+
+    </div>
+
+    <div class="next-page">Next Page</div>
+
+    <aside class="table-of-contents">
+      <span class="close-sidebar">&#10006;</span>
+      <h1>Table of Contents</h1>
+      <ol></ol>
+    </aside>
+
+    <aside class="edition-selector">
+      <span class="close-sidebar">&#10006;</span>
+      <h1>Editions</h1>
+      <ul></ul>
+    </aside>
+
+    <div id="login-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3>Log In</h3>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal">
+          <div class="control-group">
+            <label class="control-label" for="username">Username</label>
+            <div class="controls">
+              <input type="text" id="username" name="username" placeholder="Subscription username" value="activeall">
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="controls">
+              <button type="submit" class="btn btn-primary" id="do-login">Log In</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-50d337045ccf20f9"></script>
+    <script>var requirejs = { urlArgs: 'v=0.5' };</script>
+    <script data-main="js/main.min" src="js/lib/requirejs-2.1.2.min.js"></script>
+
+  </body>
+</html>

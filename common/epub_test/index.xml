@@ -1,0 +1,133 @@
+<?xml version="1.0" ?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>com.pugpig.demo.epubs</id>
+  <title>
+    ePUBs
+  </title>
+  <entry>
+    <title>
+      Three Ghost Stories
+    </title>
+    <author>
+      <name>
+        Charles Dickens
+      </name>
+    </author>
+    <summary>
+      Fiction
+    </summary>
+    <id>
+      pg1289
+    </id>
+    <updated>
+      2013-09-02T13:00:00Z
+    </updated>
+    <link href="three-ghost-stories.jpg" rel="http://opds-spec.org/image" type="image/jpg" />
+    <link href="pg1289-images.epub" rel="http://opds-spec.org/acquisition" type="application/epub+zip" />
+  </entry>
+  <entry>
+    <title>
+      A Journey to the Centre of the Earth
+    </title>
+    <author>
+      <name>
+        Jules Verne
+      </name>
+    </author>
+    <summary>
+      Fiction
+    </summary>
+    <id>
+      pg18857
+    </id>
+    <updated>
+      2013-09-02T13:00:00Z
+    </updated>
+    <link href="journey-to-the-center-of-the-earth.jpg" rel="http://opds-spec.org/image" type="image/jpg" />
+    <link href="pg18857-images.epub" rel="http://opds-spec.org/acquisition" type="application/epub+zip" />
+  </entry>
+  <entry>
+    <title>
+      The Art of War
+    </title>
+    <author>
+      <name>
+        Sun Zu
+      </name>
+    </author>
+    <summary>
+      Fiction
+    </summary>
+    <id>
+      pg17405
+    </id>
+    <updated>
+      2013-09-02T13:00:00Z
+    </updated>
+    <link href="the-art-of-war.jpg" rel="http://opds-spec.org/image" type="image/jpg" />
+    <link href="pg17405.epub" rel="http://opds-spec.org/acquisition" type="application/epub+zip" />
+  </entry>
+  <entry>
+    <title>
+      Dracula
+    </title>
+    <author>
+      <name>
+        Bram Stoker
+      </name>
+    </author>
+    <summary>
+      Fiction
+    </summary>
+    <id>
+      pg345
+    </id>
+    <updated>
+      2013-09-02T13:00:00Z
+    </updated>
+    <link href="dracula.jpg" rel="http://opds-spec.org/image" type="image/jpg" />
+    <link href="pg345-images.epub" rel="http://opds-spec.org/acquisition" type="application/epub+zip" />
+  </entry>
+  <entry>
+    <title>
+      Siddhartha
+    </title>
+    <author>
+      <name>
+        Hermann Hesse
+      </name>
+    </author>
+    <summary>
+      Fiction
+    </summary>
+    <id>
+      pg2500
+    </id>
+    <updated>
+      2013-09-02T13:00:00Z
+    </updated>
+    <link href="siddhartha.jpg" rel="http://opds-spec.org/image" type="image/jpg" />
+    <link href="pg2500.epub" rel="http://opds-spec.org/acquisition" type="application/epub+zip" />
+  </entry>
+  <entry>
+    <title>
+      Gulliver's Travels
+    </title>
+    <author>
+      <name>
+        Jonathan Swift
+      </name>
+    </author>
+    <summary>
+      Fiction
+    </summary>
+    <id>
+      pg829
+    </id>
+    <updated>
+      2013-09-02T13:00:00Z
+    </updated>
+    <link href="gullivers-travel.jpg" rel="http://opds-spec.org/image" type="image/jpg" />
+    <link href="pg829-images.epub" rel="http://opds-spec.org/acquisition" type="application/epub+zip" />
+  </entry>
+</feed>

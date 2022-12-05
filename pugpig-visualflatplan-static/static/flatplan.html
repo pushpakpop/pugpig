@@ -1,0 +1,124 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>flatplan Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
+    <script src="../libs/jquery.js"></script>
+    <script src="../libs/jquery-ui.js"></script>
+    <script src="../libs/underscore.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../libs/backbone.js" type="text/javascript" charset="utf-8"></script>
+    <style>
+    .flatplan .flatplan-item:before {
+
+    }
+    </style>
+    <!-- Version: 0.0.1_dev -->
+  </head>
+  <body>
+
+    <div class="header-panel">
+      <div class="header-panel__logo">
+        <img src="http://demo.pugpig.com/ppitc-layout-images-tmp/ppitc-wordpress-dashboard-logo.png">
+        <h1>Visual Flatplan</h1>
+      </div>
+    <!--   <h1 class="edition-title">Pugpig Labs Visual Flatplan</h1> -->
+
+      <div class="settings">
+
+        <form action="save" class="submit-form">
+          <input class="form-update-edition"  type="submit" value="Save" ></input>
+        </form>
+
+        <form class="form-settings">
+
+          <label class="form-settings__show-section-colours">Show section colours
+            <input type='checkbox'>
+          </label>
+
+          <label class="select form-settings__filter-by-section">Show section:
+          </label>
+
+          <label class="checkbox form-settings__show-linear-view">Show linear view
+            <input type='checkbox'>
+          </label>
+
+          <label class="form-settings__thumbnail-size">Thumb size:
+            <small>small</small>
+            <input class="form-settings__thumbnail-size-input" type ="range" min ="0" max="4" step ="1" value ="2"/>
+            <small>large</small>
+          </label>
+
+<!--           <label class="checkbox form-settings__hide-draft-items">Hide all draft articles
+            <input type='checkbox'>
+          </label> -->
+
+        </form>
+
+
+        <form action="submit" class="form-get-feed is-hidden">
+          <input type="text" class="form-get-feed__input">
+          <input type="submit" value="Get my flatplan" class="form-get-feed__button"></input>
+        </form>
+
+      </div>
+
+    </div>
+
+    <div class="body-panel">
+    </div>
+
+    <div class="side-panel js-side-panel-control is-away is-hidden">
+      <p class="side-panel__header">Available adverts</p>
+      <ul class="side-panel__items connected-sortable is-sortable">
+      </ul>
+    </div>
+
+    <div class="overlay-panel is-hidden">
+    </div>
+
+    <div class="loading-indicator is-hidden">
+    </div>
+
+
+    <script class="advert-template" type="text/underscore" charset="utf-8">
+      <% adverts.each(function(advert) { %>
+        <li class="flatplan-item flatplan-item--advert" data-advert-id="<%= advert.id %>"><img src="<%= advert.attributes['portrait_preview_image'] %>" alt="">
+          <p class="flatplan-item__title"><span class="c-blue"><%= advert.attributes['AdvertiserName'] %></span>: <%= advert.attributes['ProductDescription'] %></p>
+        </li>
+      <% }); %>
+    </script>
+
+    <script class="section_select_view" type="text/underscore" charset="utf-8">
+      <% _.each(sections, function(section) { %>
+        <option value="<%= section %>"><%= section %></option>
+      <% }); %>
+    </script>
+
+    <script class="article_view" type="text/underscore" charset="utf-8">
+      <% _.each(articles, function(article) { %>
+        <li class="ui-state-default flatplan-item" id="<%= article.id %>" data-category="<%= article.section %>" style="border-color: <%= article.color %>;">
+          <p class="flatplan-item__index">Page: <%= article.index + 1 %></p>
+          <img src="<%= article.snapshotPath %>">
+          <p class="flatplan-item__title"><span class="c-blue"><%= article.title %></span> </p>
+          <div class="flatplan-item__details">
+            <p class="flatplan-item__category"><strong>Section:</strong> <%= article.section %></p>
+            <p class="flatplan-item__tag"><strong>Tag:</strong> <%= article.tag %></p>
+            <p class="flatplan-item__level"><strong>Level:</strong> <%= article.level %></p>
+            <p class="flatplan-item__id"><strong>ID:</strong> <%= article.id %> </p>
+            <a class="flatplan-item__edit" target="blank" href="<%= article.viewPath %>">Preview</a>
+            <a class="flatplan-item__edit" target="blank" href="<%= article.editPath %>">Edit</a>
+            <!--<p><a class="flatplan-item__add-to-edition" href="">Add to edition</a></p>
+            <p><a class="flatplan-item__remove-from-edition" href="">Remove from edition</a></p> -->
+          </div>
+        </li>
+      <% }); %>
+    </script>
+
+    <script src="../scripts/main.js" type="text/javascript" charset="utf-8"></script>
+
+  </body>
+</html>

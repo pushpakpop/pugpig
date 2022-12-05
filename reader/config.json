@@ -1,0 +1,121 @@
+{
+  "displayToolbar": true,
+  "displaySocial": true,
+  "defaultDisplayModeIndex": 0,
+  "slideTransitionDuration": 500,
+  "authUrls": {
+    "token": "",
+    "verifyToken": ""
+  },
+  "devices": [
+    {
+      "device": "iPad",
+      "orientation": "Landscape",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "device": "iPad",
+      "orientation": "Portrait",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "device": "iPhone 5",
+      "orientation": "Landscape",
+      "width": 568,
+      "height": 320
+    },
+    {
+      "device": "iPhone 5",
+      "orientation": "Portrait",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "device": "iPhone 3/4",
+      "orientation": "Landscape",
+      "width": 480,
+      "height": 320
+    },
+    {
+      "device": "iPhone 3/4",
+      "orientation": "Portrait",
+      "width": 320,
+      "height": 480
+    },
+    {
+      "device": "Kindle Fire",
+      "orientation": "Landscape",
+      "width": 1024,
+      "height": 600
+    },
+    {
+      "device": "Kindle Fire",
+      "orientation": "Portrait",
+      "width": 600,
+      "height": 1024
+    },
+    {
+      "device": "Microsoft Surface RT",
+      "orientation": "Landscape",
+      "width": 1366,
+      "height": 768
+    },
+    {
+      "device": "Microsoft Surface RT",
+      "orientation": "Landscape - Fill View",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "device": "Microsoft Surface RT",
+      "orientation": "Landscape - Snap View",
+      "width": 320,
+      "height": 768
+    },
+    {
+      "device": "Microsoft Surface RT",
+      "orientation": "Portrait",
+      "width": 768,
+      "height": 1366
+    },
+    {
+      "device": "BlackBerry Z10 ",
+      "orientation": "Landscape",
+      "width": 640,
+      "height": 384
+    },
+    {
+      "device": "BlackBerry Z10",
+      "orientation": "Portrait",
+      "width": 768,
+      "height": 640
+    },
+    {
+      "device": "BlackBerry Q10 ",
+      "orientation": "",
+      "width": 360,
+      "height": 360
+    },
+    {
+      "device": "BB10",
+      "orientation": "Landscape",
+      "width": 640,
+      "height": 360
+    },
+    {
+      "device": "BB10",
+      "orientation": "Portrait",
+      "width": 360,
+      "height": 640
+    },
+    {
+      "__comment":"THIS SHOULD ALWAYS BE THE LAST DISPLAY MODE",
+      "device": "Custom Dimensions",
+      "orientation": "",
+      "width": 1024,
+      "height": 768
+    }
+  ]
+}
